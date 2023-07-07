@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tierra</title>
+  <link rel="stylesheet" href="mystyle1.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/bootstrap.bundle.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <header class="d-flex justify-content-center py-3">
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="{% url 'login'%}" class="nav-link active" aria-current="page">Inicio</a></li>
+        <li class="nav-item"><a href="{% url 'plantas'%} class="nav-link">Plantas</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Ayuda</a></li>
+        <form>
+          <input type="search" class="form-control" placeholder="Buscar...">
+        </form>
+      </ul>
+      </div>
+    </header>
+  </div>
+  <br><br><br><br>
+
+<div class="row">
+  <div class="col-75">
+    <div class="container">
+      <form action="/action_page.php">
+      
+        <div class="row">
+          <div class="col-50">
+            <h3>Datos del comprador</h3>
+            <label for="fname"><i class="fa fa-user"></i> Nombre completo</label>
+            <input type="text" id="fname" name="firstname" placeholder="Martin Vega...">
+            <label for="email"><i class="fa fa-envelope"></i> Correo</label>
+            <input type="text" id="email" name="email" placeholder="martin@example.com...">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Direccion</label>
+            <input type="text" id="adr" name="address" placeholder="Ave. Manuel Montt...">
+            <label for="city"><i class="fa fa-institution"></i> Ciudad</label>
+            <input type="text" id="city" name="city" placeholder="Providencia...">
+
+            <div class="row">
+              <div class="col-50">
+                <label for="state">Region</label>
+                <input type="text" id="state" name="state" placeholder="Region Metropolitana...">
+              </div>
+              <div class="col-50">
+                <label for="zip">Codigo Postal</label>
+                <input type="text" id="zip" name="zip" placeholder="10001">
+              </div>
+            </div>
+          </div>
+
+          <div class="col-50">
+            <h3>Datos de comprador</h3>
+
+            <label for="cname">Nombre en la tarjeta</label>
+            <input type="text" id="cname" name="cardname" placeholder="Martin Vega">
+            <label for="ccnum">Numero de tarjeta</label>
+            <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+            <label for="expmonth">Mes de vencimiento</label>
+            <input type="text" id="expmonth" name="expmonth" placeholder="Enero">
+            <div class="row">
+              <div class="col-50">
+                <label for="expyear">Año de vencimiento</label>
+                <input type="text" id="expyear" name="expyear" placeholder="2027">
+              </div>
+              <div class="col-50">
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv" placeholder="352">
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        <label>
+          <input type="checkbox" checked="checked" name="sameadr"> Acepto todos los terminos de compra.
+        </label>
+        <div><input type="submit" value="Continuar con la compra" class="btn btn-primary"></div>
+        
+      </form>
+    </div>
+  </div>
+  <div class="col-25">
+    <div class="container">
+      <h4> Carrito de compras <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b>1</b></span></h4>
+      <img src="img/a1.jpg" alt="" width="50%">
+      <br><br>
+      <p>Total<span class="price" style="color:black"><b>$7.990</b></span></p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
